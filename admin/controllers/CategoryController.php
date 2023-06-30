@@ -3,6 +3,7 @@ include_once 'models/Category.php';
 class CategoryController extends Controller{
     // goi toi trang danh sach 
     public function index(){
+       
         //  goi toi model
         $objCategory= new Category();
         // model thao tac voi CSDL tra ve controller 

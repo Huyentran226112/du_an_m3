@@ -21,7 +21,7 @@ $row = $stmt->fetch();
                     <div class="carousel-inner bg-light">
 
                         <div class="carousel-item active">
-                            <img class="w-100 h-100" src="admin<?php echo $row['image'];?>" alt="Image">
+                            <img class="w-100 h-100" src="admin/<?php echo $row['image'];?>" alt="Image">
                         </div>
                       
                     </div>

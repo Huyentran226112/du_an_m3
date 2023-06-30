@@ -55,7 +55,7 @@ $number_of_page = ceil ($number_of_result / $results_per_page);
                         <td>'.$items[$page_first_result]['price'].'</td>
                         <td>'.$items[$page_first_result]['quantity'].'</td>
                         <td>'.$items[$page_first_result]['category_name'].'</td>
-                        <td><img src="http://localhost:3000/admin'. $items[$page_first_result]['image'].'" width="80"></td>
+                        <td><img src="'. $items[$page_first_result]['image'].'" width="80"></td>
                         <td>'.$items[$page_first_result]['status']=0?'Tắt':'Bật'.'</td>
                         <td>
                         <a class="btn btn-warning"  href="index.php?controller=product&action=edit&id '.$items[$page_first_result]['id'].' "><i class="bi bi-pencil"></i></a> <br>
@@ -74,7 +74,7 @@ $number_of_page = ceil ($number_of_result / $results_per_page);
                    <?php
                     // chạy vòng lặp hiển thị phần trang 
                     for($page = 1; $page<= $number_of_page; $page++) {
-                        echo '<a href = "  http://localhost:3000/admin/index.php?controller=product&action=index.php&page=' . $page . '">' . $page . ' </a>';
+                        echo '<a href = "index.php?controller=product&action=index&page=' . $page . '">' . $page . ' </a>';
                     }
                     ?>
                     <script>
@@ -85,7 +85,7 @@ $number_of_page = ceil ($number_of_result / $results_per_page);
                         if(add=='successfully'){
                          alert('thêm thành công')
                         }else if(add=='failedd'){
-                            alert('them that bai')
+                            alert('thêm thất bại ')
                         }
                     </script>  
                     

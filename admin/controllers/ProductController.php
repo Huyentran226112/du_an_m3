@@ -53,7 +53,7 @@ class ProductController extends Controller{
         // goi model 
         $objProduct = new Product();
         $objProduct->save($data);
-        // header('Location: http://localhost:3000/admin/index.php?controller=product&action=index.php?add=successfunly');
+        // header('Location: index.php?controller=product&action=index.php?add=successfunly');
       
         // chuyen huowng ve trang danh sach
         $this->redirect("index.php?controller=product&action=index&add=successfully");

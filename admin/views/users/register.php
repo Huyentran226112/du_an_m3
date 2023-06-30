@@ -285,19 +285,24 @@ input[type=text]:placeholder {
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="http://localhost:3000/admin/public/uploads/jjjjjjjj.jpg"  id="icon" alt="User Icon" />
+      <img src="/admin/public/uploads/jjjjjjjj.jpg"  id="icon" alt="User Icon" />
     </div>
 
     <!-- Login Form -->
-    <form action="login_query.php" method="POST">
-      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email" required>
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password"  required>
-      <input type="submit" class="fadeIn fourth" value="ĐĂNG NHẬP">
+    <form  action="index.php?controller=user&action=postregister" method="POST">
+      <input type="text" id="name" class="fadeIn second" name="name" placeholder="name">
+      <input type="text" id="address" class="fadeIn third" name="address" placeholder="address">
+      <input type="date" id="start_date" class="fadeIn third" name="start_date" placeholder="start_date">
+      <input type="text" id="phone" class="fadeIn third" name="phone" placeholder="phone">
+      <input type="text" id="email" class="fadeIn third" name="email" placeholder="email">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+      <!-- <input type="file"  id="image" class="fadeIn third" name="image" placeholder="image"> -->
+      <input type="submit" class="fadeIn fourth" value="HOÀN TẤT ">
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="register.php">Đăng ký</a>
+      <a href="index.php?controller=user&action=register">Dang ki</a>
     </div>
 
   </div>

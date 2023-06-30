@@ -67,7 +67,7 @@ $number_of_page = ceil ($number_of_result / $results_per_page);
 <?php
                     // chạy vòng lặp hiển thị phần trang 
                     for($page = 1; $page<= $number_of_page; $page++) {
-                        echo '<a href = "  http://localhost:3000/admin/index.php?controller=order&action=index.php&page=' . $page . '">' . $page . ' </a>';
+                        echo '<a href = "index.php?controller=order&action=index&page=' . $page . '">' . $page . ' </a>';
                     }
       
                     ?>

@@ -1,22 +1,14 @@
-<?php session_start(); ?>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Login Page</title>
-   <!--Made with love by Mutiullah Samim -->
-   
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <style>
 
@@ -30,12 +22,14 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
 }
+
 a {
   color: #92badd;
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
 }
+
 h2 {
   text-align: center;
   font-size: 16px;
@@ -45,6 +39,9 @@ h2 {
   margin: 40px 8px 10px 8px; 
   color: #cccccc;
 }
+
+
+
 /* STRUCTURE */
 
 .wrapper {
@@ -274,13 +271,12 @@ input[type=text]:placeholder {
 } 
 
 #icon {
-  width:25%;
+  width:60%;
 }
 
 </style>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<body>
+
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="wrapper fadeInDown">
@@ -289,19 +285,22 @@ input[type=text]:placeholder {
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="http://localhost:3000/admin/public/uploads/jjjjjjjj.jpg"  id="icon" alt="User Icon" />
+      <img src="/admin/public/uploads/jjjjjjjj.jpg"  id="icon" alt="User Icon" />
     </div>
 
     <!-- Login Form -->
-    <form  action="register_query.php" method="POST">
-      <input type="text" id="name" class="fadeIn second" name="name" placeholder="name">
-      <input type="text" id="address" class="fadeIn third" name="address" placeholder="address">
-      <input type="date" id="start_date" class="fadeIn third" name="start_date" placeholder="start_date">
-      <input type="text" id="phone" class="fadeIn third" name="phone" placeholder="phone">
-      <input type="text" id="email" class="fadeIn third" name="email" placeholder="email">
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
-      <!-- <input type="file"  id="image" class="fadeIn third" name="image" placeholder="image"> -->
-      <input type="submit" class="fadeIn fourth" value="HOÀN TẤT ">
+    <form action="index.php?controller=user&action=postlogin" method="POST">
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email" required>
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password"  required>
+      <input type="submit" class="fadeIn fourth" value="ĐĂNG NHẬP">
     </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a href="index.php?controller=user&action=register">Dang ki</a>
+    </div>
+
   </div>
 </div>
+</body>
+</html>

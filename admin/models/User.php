@@ -63,39 +63,18 @@ class User extends Model {
         //Thuc hien truy van
         $this->conn->exec($sql);
     }
+    public function login($email,$password){
+        $sql = "SELECT * FROM `users` WHERE `email`= '$email' AND `password`= '$password'";
+        $stmt = $this->conn->query($sql);
+        $stmt->setFetchMode(PDO::FETCH_OBJ);
+        $row = $stmt->fetch();
+        return $row;
+    }
+    public function register($email,$password,$phone,$start_date,$address,$name){
+        $sql = "INSERT INTO `users`(`name`,`address`,`start_date`,`phone`,`email`,`password`) 
+        VALUES ('$name', '$address', '$start_date','$phone','$email','$password')";
+        $stmt = $this->conn->query($sql);
+        $row = $stmt->fetch();
+        return $row;
+    }
 }
-// Khoi tao doi tuong
-// $user = new User();
-// // Gọi phương thức save 5 lan và truyền vào mảng dữ liệu thông tin của 5 thành viên
-// $data = [
-//     'name' => 'huyen',
-//     'address' => 'gio linh',
-//     'start_date' => '21/12/2015',
-//     'phone' => '0212165',
-//     'address' => 'gio linh',
-//     'email' => 'h@gmail.com',
-//     'image' => 'kjhg',
-// ];
-// // $user->save($data);
-// // - Gọi phương thức all và in ra kết quả
-// echo '<pre>';
-// print_r($user->all());
-// echo '</pre>';
-// // Gọi phương thức find và truyền vào id là 1 sau đó in ra kết quả
-// echo '<pre>';
-// print_r($user->find(2));
-// echo '</pre>';
-// // Gọi phương thức update và truyền vào id và mảng dữ liệu
-// // $data = [
-// //     'name' => 'Phong123',
-// //     'age' => 256,
-// //     'phone' => '0367717778',
-// //     'address' => 'Quang tri',
-// // ];
-// $user->update(2,$data);
-// // Gọi phương thức delete và truyền vào id
-// $user->delete(1);
-// // - Gọi phương thức all và in ra kết quả
-// echo '<pre>';
-// print_r($user->all());
-// echo '</pre>';

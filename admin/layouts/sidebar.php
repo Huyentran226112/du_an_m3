@@ -9,10 +9,10 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="http://localhost:3000/admin/index.php?controller=category&action=index">THỂ LOẠI </a>
-                                    <a class="nav-link" href="http://localhost:3000/admin/index.php?controller=product&action=index">MẶT HÀNG</a>
-                                    <a class="nav-link" href="http://localhost:3000/admin/index.php?controller=order&action=index">ĐƠN HÀNG</a>
-                                    <a class="nav-link" href="http://localhost:3000/admin/index.php?controller=user&action=index">NGƯỜI DÙNG</a>
+                                    <a class="nav-link" href="index.php?controller=category&action=index">THỂ LOẠI </a>
+                                    <a class="nav-link" href="index.php?controller=product&action=index">MẶT HÀNG</a>
+                                    <a class="nav-link" href="index.php?controller=order&action=index">ĐƠN HÀNG</a>
+                                    <a class="nav-link" href="index.php?controller=user&action=index">NGƯỜI DÙNG</a>
                                 </nav>
                             </div>
                         </div>

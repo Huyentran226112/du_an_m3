@@ -114,7 +114,7 @@ $number_of_page = ceil ($number_of_result / $results_per_page);
                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="admin'.$products[$page_first_result]['image'].'">
+                                <img class="img-fluid w-100" src="admin/'.$products[$page_first_result]['image'].'">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href="detail.php?id='.$products[$page_first_result]['id'].'">
                                     <i class="fa fa-shopping-cart"></i></a>

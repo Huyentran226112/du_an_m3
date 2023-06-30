@@ -1,13 +1,13 @@
-<?php  
+<?php
 // Kiểm tra tồn tại chỉ số action trong mảng $_REQUEST
-if( isset( $_REQUEST['controller'] ) ){
+if (isset($_REQUEST['controller'])) {
     $controller = $_REQUEST['controller'];
-}else{
+} else {
     $controller = 'product';
 }
-if( isset( $_REQUEST['action'] ) ){
+if (isset($_REQUEST['action'])) {
     $action = $_REQUEST['action'];
-}else{
+} else {
     $action = 'index';
 }
 include_once 'controllers/Controller.php';
@@ -29,10 +29,10 @@ switch ($controller) {
         include_once 'controllers/OrderController.php';
         $objController = new OrderController();
         break;
-        case 'index':
-            include_once 'controllers/Indexcontrollers.php';
-            $objController = new Indexcontrollers();
-            break;
+    case 'index':
+        include_once 'controllers/Indexcontrollers.php';
+        $objController = new Indexcontrollers();
+        break;
     default:
         # code...
         break;
@@ -42,33 +42,45 @@ switch ($controller) {
 
 // Quyết định gọi action nào dựa vào biến action
 switch ($action) {
-    // Hiển thị trang danh sách
+        // Hiển thị trang danh sách
     case 'index':
         $objController->index();
         break;
-    // Hiển thị form thêm mới
+        // Hiển thị form thêm mới
     case 'create':
         $objController->create();
         break;
-    // Xử lý thêm mới
+        // Xử lý thêm mới
     case 'store':
         $objController->store();
         break;
-    // Hiển thị form chỉnh sửa
+        // Hiển thị form chỉnh sửa
     case 'edit':
         $objController->edit();
         break;
-    // Xử lý chỉnh sửa
+        // Xử lý chỉnh sửa
     case 'update':
         $objController->update();
         break;
-    // Hiển thị trang xóa
+        // Hiển thị trang xóa
     case 'edit':
         $objController->edit();
         break;
-     // Xử lý xóa
+        // Xử lý xóa
     case 'destroy':
         $objController->destroy();
+        break;
+    case 'login':
+        $objController->login();
+        break;
+    case 'postlogin':
+        $objController->postlogin();
+        break;
+    case 'register':
+        $objController->register();
+        break;
+    case 'postregister':
+        $objController->postregister();
         break;
     default:
         $objController->index();
